@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ton Fishing</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #e0f7fa; }
+  #fish { width: 150px; margin: 20px auto; }
+  button { font-size: 20px; padding: 10px 20px; cursor: pointer; background: #0288d1; color: white; border: none; border-radius: 8px; }
+  #score { font-size: 24px; margin-top: 20px; }
+</style>
+</head>
+<body>
+  <h1>🎣 Ton Fishing</h1>
+  <img id="fish" src="img/fish.png" alt="Рыба" />
+  <div>
+    <button onclick="catchFish()">Поймать рыбу</button>
+  </div>
+  <div id="score">Поймано рыбы: 0</div>
+
+  <script>
+    let score = 0;
+    function catchFish() {
+      score++;
+      document.getElementById('score').innerText = 'Поймано рыбы: ' + score;
+    }
+  </script>
+</body>
+</html>
